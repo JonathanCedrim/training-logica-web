@@ -6,21 +6,44 @@
 	<script type="text/javascript" src="../js/script-2.js"></script>
 </head>
 <body>
-	<form>
+
+
+	<section>
 		<fieldset>
-			<legend><h3>Álcool ou Gasolina?</h3></legend>
+			<legend><h1 id="modelo">Carro</h1></legend>
+					
+			<p>Tipo  de combustivel</p>
+			<strong id="aceitaCombustivel">Alcool</strong>
+		</fieldset>
 
-			<label for="alcool">Álcool</label>
-			<input type="radio" name="combustivel" value="alcool" id="alcool">		
+	</section>
 
-			
-			<label for="gasolina">Gasolina</label>
-			<input type="radio" name="combustivel" value="gasolina" id="gasolina">
+	<section>
+		<form >
+			<fieldset>
+				<legend><h3>Qual Combustivel</h3></legend>
 
-			<label for="litro"><h4>Litro</h4></label>
-			<input type="range" name="litro" id="litro" value="50">
-			<output id="quantidade" for="litro"></output>
-		</fieldset>	
-	</form>	
+				<label for="gasolina">Gasolina</label>
+				<input type="radio" name="tipoCombustivel" value="gasolina" id="gasolina" checked/>
+
+				<label for="alcool">Álcool</label>
+				<input type="radio" name="tipoCombustivel" value="alcool" id="alcool"/>		
+
+				
+				
+
+				<label for="litro"><h4>Litro</h4></label>
+				<input type="range" name="litro" id="litro" value="50" max="40">
+				<output id="quantidade" for="litro"></output>
+
+				<br />
+				
+				<strong>Roda KM:</strong>
+				<strong id="distancia"></strong>
+				<br />
+				<input id="enviar" type="button" value="enviar"></input>
+			</fieldset>	
+		</form>	
+	</section>
 </body>
 </html>
