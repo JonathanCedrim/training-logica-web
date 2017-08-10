@@ -1,7 +1,6 @@
-let carro = {"modelo" : "Sw4", "combustivel" : "Hibrido", "consome": 12, "tanque": 40};
+let carro = {"modelo" : "Sw4", "combustivel" : "Hibrido", "tanque": 40};
 let range;
 let quantidade;
-let doc = document;
 let submit;
 let enviar;
 let distancia;
@@ -9,14 +8,14 @@ let aceitaCombustivel;
 let tipoCombustivel;
 
 window.onload = function() {
-	range = doc.getElementById("litro");
-	quantidade = doc.getElementById("quantidade");
-	enviar = doc.getElementById("enviar");	
-	modelo = doc.getElementById("modelo");
-	aceitaCombustivel = doc.getElementById("aceitaCombustivel");	
-	distancia = doc.getElementById("distancia");
-	tipoCombustivel = doc.getElementById("gasolina");
-	doc.getElementById("alcool").addEventListener("click", alterouTipoCombustivel);
+	range = document.getElementById("litro");
+	quantidade = document.getElementById("quantidade");
+	enviar = document.getElementById("enviar");	
+	modelo = document.getElementById("modelo");
+	aceitaCombustivel = document.getElementById("aceitaCombustivel");	
+	distancia = document.getElementById("distancia");
+	tipoCombustivel = document.getElementById("gasolina");	
+	
 
 	aceitaCombustivel.innerHTML = carro.combustivel;
 	modelo.innerHTML = carro.modelo;
@@ -26,6 +25,8 @@ window.onload = function() {
 	quantidade.max = carro.tanque;
 	distancia.innerHTML = 480;
 
+
+	document.getElementById("alcool").addEventListener("click", alterouTipoCombustivel);
 	range.addEventListener("input", alterar);
 	enviar.addEventListener("click", windowLocation);
 	tipoCombustivel.addEventListener("click", alterouTipoCombustivel);
@@ -40,7 +41,7 @@ function alterar() {
 	if(tipoCombustivel.checked) {
 		distancia.innerHTML = quantidade.value * 12;	
 	} else {
-		distancia.innerHTML = quantidade.value * 7.5;
+		distancia.innerHTML = Math.round(quantidade.value * 7.5);
 	}
 }
 
@@ -53,7 +54,7 @@ function windowLocation() {
 
 	console.log(quantidadee);
 }
-f
+
 function alterouTipoCombustivel() {
 	alterar();
 }
