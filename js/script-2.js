@@ -53,7 +53,7 @@ function windowLocation() {
 
 	console.log(quantidadee);
 }
-
+f
 function alterouTipoCombustivel() {
 	alterar();
 }
