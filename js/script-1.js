@@ -1,8 +1,4 @@
-document.write("Segundo programa ");
-document.write("<br />");
-document.write(25+ 25/2);
-
-var x;
+let x;
 
 window.onload = function(){
     x =  document.querySelector("#ola");
